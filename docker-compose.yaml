@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  typescript-backend:
+    build:
+      context: ./ts
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    container_name: typescript-backend
+
+  python-backend:
+    build:
+      context: ./python
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    container_name: python-backend
+
+  golang-backend:
+    build:
+      context: ./golang
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    container_name: golang-backend
