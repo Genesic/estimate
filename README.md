@@ -7,10 +7,10 @@
 使用mac m3 air進行測試
 
 執行docker stats
-可以看到記憶體使用狀態
-golang=2.852MB
-typescript=23.6MB
-python=35.7MB
+可以看到記憶體使用狀態  
+golang=2.852MB  
+typescript=23.6MB  
+python=35.7MB  
 ```
 CONTAINER ID   NAME                 CPU %     MEM USAGE / LIMIT     MEM %     NET I/O       BLOCK I/O    PIDS
 dbba8e7cf4ca   golang-backend       0.00%     2.852MiB / 7.657GiB   0.04%     1.76kB / 0B   0B / 0B      5
@@ -18,11 +18,10 @@ dbba8e7cf4ca   golang-backend       0.00%     2.852MiB / 7.657GiB   0.04%     1.
 c5798cf55fbf   typescript-backend   0.00%     23.6MiB / 7.657GiB    0.30%     1.76kB / 0B   0B / 4.1kB   18
 ```
 
-執行docker image ls
-可以看到docker image size
-golang=6.73MB
-typescript=183MB
-python=191MB
+執行docker image ls可以看到docker image size  
+golang=6.73MB  
+typescript=183MB  
+python=191MB  
 ```
 REPOSITORY                    TAG                    IMAGE ID       CREATED          SIZE
 estimate-python-backend       latest                 0710decd2ad1   4 minutes ago    191MB
@@ -30,8 +29,8 @@ estimate-typescript-backend   latest                 d78122ddd845   4 minutes ag
 estimate-golang-backend       latest                 6286420c4d5b   25 minutes ago   6.73MB
 ```
 
-使用k6進行壓力測試
-在1分鐘內50個user每秒發送一個request
+使用k6進行壓力測試  
+在1分鐘內50個user每秒發送一個request  
 
 golang壓測結果(http_req_receiving avg=41.23us)
 ```
